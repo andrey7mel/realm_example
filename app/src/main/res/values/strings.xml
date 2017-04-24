@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Realm Examlpe</string>
+    <string name="app_name">Realm Example</string>
     <string name="action_settings">Settings</string>
     <string name="title_rx">Rx</string>
     <string name="title_list">Realm List</string>
