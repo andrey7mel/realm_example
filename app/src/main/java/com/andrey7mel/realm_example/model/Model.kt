@@ -23,7 +23,7 @@ internal constructor() {
     fun deleteObject(id: Long) {
         Realm.getDefaultInstance().use {
             it.executeTransactionAsync {
-                it.where(DataObject::class.java).equalTo("id", id).findFirst().deleteFromRealm()
+                findFirstDataObject(id, it).deleteFromRealm()
             }
         }
     }
@@ -33,7 +33,7 @@ internal constructor() {
     }
 
     fun getObject(realm: Realm, id: Long): DataObject? {
-        return realm.where(DataObject::class.java).equalTo("id", id).findFirst()
+        return findFirstDataObject(id, realm)
     }
 
     fun addTestObject() {
@@ -102,5 +102,9 @@ internal constructor() {
     fun clearRealm() {
         Realm.getDefaultInstance().use({ it.executeTransaction { it.deleteAll() } })
     }
+
+    private fun findFirstDataObject(id: Long, realm: Realm): DataObject
+            = realm.where(DataObject::class.java).equalTo("id", id).findFirst()
+
 
 }
