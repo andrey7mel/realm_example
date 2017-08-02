@@ -1,5 +1,5 @@
 # Android Realm Example
-Android Realm Example, code for [habrahabr article][1]
+Android Realm Example, code for [habrahabr article][1], [medium post][2]
 
 License
 -------
@@ -18,3 +18,4 @@ License
 
 
 [1]: https://habrahabr.ru/post/328418/
+[2]: https://medium.com/@andrey7mel/realistic-realm-1-5-year-of-experience-ffd9940f47f6
